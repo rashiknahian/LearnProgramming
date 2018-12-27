@@ -93,3 +93,23 @@ A function is a block of code which will be executed only if it is called.
     }
     document.write(add(4,5));
 
+###  Object Methods
+
+Objects can also have  **methods**.Methods are  **actions**  that can be performed on objects.Methods are stored in properties as  **function definitions**.
+
+    var person = {  
+	firstName: "John",  
+	lastName : "Doe",  
+	id : 5566,  
+	fullName : function() {  
+		return  this.firstName + " " + this.lastName;  
+		}  
+	}
+### This Keyword
+In a function definition,  **this**  refers to the "owner" of the function. In the example above,   **this.firstName**  means the  **firstName**  property of  **this object**.
+
+### Accessing Object Methods
+
+    name = person.fullName();
+    /* If you access a method **without** the () parentheses, it will return the function definition */
+    name = person.fullName;
