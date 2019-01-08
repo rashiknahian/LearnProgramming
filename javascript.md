@@ -1,7 +1,32 @@
-﻿ # JavaScript
- ## Print in Browser
- 
+ # JavaScript
+ ## Attach with HTML
+ JavaScript can be implemented using JavaScript statements that are placed within the `<script>... </script>` HTML tags in a web page.
+### External JavaScript
+External scripts are practical when the same code is used in many different web pages.
+
+JavaScript files have the file extension .js
+
+    <script src="myScript.js"></script>
+
+ ## Output
+ ###  Using innerHTML
+ To access an HTML element, JavaScript can use the  `document.getElementById(id)`  method.
+
+The  `id`  attribute defines the HTML element. The  `innerHTML`  property defines the HTML content
+
+    <p id="demo"></p>  
+
+    <script>  
+         document.getElementById("demo").innerHTML  =  5  +  6;  
+    </script>
+
+ ###  Using document.write()
     document.write( "Hello World");
+### 
+### Using window.alert()
+An alert box to display data
+
+    window.alert(5 + 6);
 
  ## Variable declare,assign,add :
     var a = 12;
@@ -46,7 +71,7 @@ You can also create an array using Array constructor like this:
         //Push
         no.push(10);
         document.write(no);
-### Loop
+## Loop
 
 Loops are useful when you have to execute the same lines of code repeatedly, for a specific number of times or as long as a specific condition is true.
 
@@ -70,7 +95,7 @@ Loops are useful when you have to execute the same lines of code repeatedly, for
         document.write(vowels[i] + "<br/>");
         i++;
     }
-### Conditional Statements
+## Conditional Statements
 
 Conditional statements are used to decide the flow of execution based on different conditions.
 
@@ -84,7 +109,7 @@ Conditional statements are used to decide the flow of execution based on differe
     {
         document.write("PM");
     }
-### Function
+## Function
 A function is a block of code which will be executed only if it is called.
 
     function add(a , b)
@@ -92,6 +117,21 @@ A function is a block of code which will be executed only if it is called.
          return(a+b);
     }
     document.write(add(4,5));
+## Object
+Objects are variables too. But objects can contain many values.The values are written as **name:value** pairs (name and value separated by a colon)
+###  Object Properties
+
+    //Object Defination
+        var car = {
+            company:"BMW",
+            year:2010,
+            origin:"Germany",
+        };
+        
+    //Accessing Object Properties
+    document.write(car.year);
+    document.write("<br>");
+    document.write(car.company);
 
 ###  Object Methods
 
@@ -113,3 +153,4 @@ In a function definition,  **this**  refers to the "owner" of the function. In t
     name = person.fullName();
     /* If you access a method **without** the () parentheses, it will return the function definition */
     name = person.fullName;
+    
